@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Medical Slate-Blue Primary Palette */
+  --cp-primary: #0284c7;
+  --cp-primary-hover: #0369a1;
+  --cp-primary-subtle: rgba(14, 165, 233, 0.12);
+  --cp-accent: #0ea5e9;
+  --cp-success: #10b981;
+  --cp-warning: #f59e0b;
+  --cp-danger: #ef4444;
+
+  /* Clinical Light Mode */
+  --cp-bg: #f8fafc;
+  --cp-surface: #ffffff;
+  --cp-surface-2: #f1f5f9;
+  --cp-surface-header: #f8fafc;
+  --cp-border: #e2e8f0;
+  --cp-text: #0f172a;
+  --cp-text-muted: #64748b;
+  --cp-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+
+  --font-arabic: 'Cairo', system-ui, -apple-system, sans-serif;
+}
+
+[data-bs-theme="dark"], body.dark-theme {
+  /* Clinical Dark Mode */
+  --cp-bg: #090d16;
+  --cp-surface: #111827;
+  --cp-surface-2: #1f2937;
+  --cp-surface-header: #172033;
+  --cp-border: #1e293b;
+  --cp-text: #f8fafc;
+  --cp-text-muted: #94a3b8;
+  --cp-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-arabic);
+  background-color: var(--cp-bg);
+  color: var(--cp-text);
+  direction: rtl;
+  text-align: right;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilities for numbers and English text */
+.dir-ltr {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.font-monospace {
+  font-family: 'SFMono-Regular', Menlo, Monaco, Consolas, monospace !important;
+}
+
+.bg-surface {
+  background-color: var(--cp-surface) !important;
+  color: var(--cp-text) !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cp-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Smooth Transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Print CSS Standards */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .d-print-none,
+  nav,
+  .toast-container-fixed,
+  .modal-backdrop-custom {
+    display: none !important;
+  }
+}
